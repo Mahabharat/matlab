@@ -1,0 +1,12 @@
+clc;
+clear;
+t=-3:0.1:3;
+x= cos(2*pi*t);
+y= sin(2*pi*t);
+z= conv(x,y);
+subplot(2,2,1);
+plot(t,x);
+subplot(2,2,2);
+plot(t,y);
+subplot(2,2,3);
+plot(z);

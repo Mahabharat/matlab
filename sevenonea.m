@@ -1,0 +1,26 @@
+clc
+clear all
+t=0:100;
+x=2*exp(-t/2)
+subplot(5,1,1)
+plot(t,x)
+a=2;
+t1=a*t
+x=2*exp(-t1/2)
+subplot(5,1,2)
+plot(t1/a,x)
+a1=1/2;
+t2=a1*t
+x=2*exp(-t2/2)
+subplot(5,1,3)
+plot(t2/a1,x)
+a2=1/3;
+t3=a2*t
+x=2*exp(-t3/2)
+subplot(5,1,4)
+plot(t3/a2,x)
+a3=3;
+t4=a3*t
+x=2*exp(-t4/2)
+subplot(5,1,5)
+plot(t4/a3,x)

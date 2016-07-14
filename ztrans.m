@@ -1,0 +1,20 @@
+ clc;
+clear;
+num=input('Enter the numerator coefficient');
+den=input('Enter the denominator coefficient');
+H= filt(num,den); %find the location of zeroes;
+z= zero(H);
+disp('zeroes are at');
+disp(z);
+% find residue, pole locations & constant of H(z)
+[r p k]= residueZ(num,den);
+disp('poles are at');
+disp(p);
+zplane(num,den);
+HI=tf(num,den);
+[PI,ZI]=pzmap(HI);
+disp('poles at');
+disp(PI);
+disp('zeroes at');
+disp(ZI); figure; pzmap(HI);
+title('pde-zero map of LTI system in S-plane');

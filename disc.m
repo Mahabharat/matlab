@@ -1,0 +1,20 @@
+clc;
+clear all;
+C=5;
+b=4;
+n=0:0.1:10;
+x1=C*exp(b*n);
+subplot(4,1,1)
+stem(n,x1);
+A=5;
+f=100;
+fs=25;
+x2=A*cos(f/fs*n+.5);
+subplot(4,1,2)
+stem(n,x2);
+z=x1.*x2;
+subplot(4,1,3)
+stem(z);
+y=x1+x2;
+subplot(4,1,4)
+stem(y);
